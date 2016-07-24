@@ -1,0 +1,25 @@
+extends /blocks/layout-default/layout-default
+
+block head
+	- var pageTitle = 'Sign Up';
+	- var pageDescription = '';
+	- var pageKeywords = '';
+
+block page
+	- var pageClasses = ['page--layout-left-right']
+
+block content
+	.mdl-layout.mdl-js-layout.mdl-layout--fixed-drawer.mdl-layout--fixed-header
+		include ../blocks/page/page__header.jade
+		aside.mdl-layout__drawer.mdl-layout__drawer--left
+			include ../blocks/page/page__sidebar-list.jade
+		.mdl-layout__content.uk-flex.uk-flex-center.uk-flex-middle
+			.page__content-container
+				img.m-b-3.uk-responsive-width(src='assets/images/icon-primary-todolist-336x336.png', alt='', width='168', height='168')
+				p.mdl-typography--display-1.m-b-0.text-primary Have a good day
+
+		.mdl-layout__drawer.mdl-layout__drawer--right
+			.page__drawer-container
+				| right
+	button.mdl-button.mdl-js-button.mdl-button--fab.mdl-button--colored.page__floating-button.mdl-js-ripple-effect
+		i.mdi.mdi-plus

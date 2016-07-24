@@ -1,0 +1,36 @@
+extends /blocks/layout-default/layout-default
+
+block head
+	- var pageTitle = 'Sign in';
+	- var pageDescription = '';
+	- var pageKeywords = '';
+
+block page
+	- var pageClasses = ['page--layout-right', 'page--sign']
+
+block content
+	.mdl-layout.mdl-js-layout.mdl-layout--fixed-drawer
+		.mdl-layout__content.uk-flex.uk-flex-center.uk-flex-middle
+			.page__content-container
+				img.m-b-3.uk-responsive-width(src='assets/images/icon-white-todolist-336x336.png', alt='', width='168', height='168')
+				p.mdl-typography--display-1.m-b-0 Lorem ipsum dolor sit amet,  consectetur adipisicing elit
+		.mdl-layout__drawer.mdl-layout__drawer--right.uk-flex.uk-flex-center.uk-flex-middle
+			.page__drawer-container
+				form.page__drawer-form(action='')
+					.page__drawer-form-header
+						h2 Sign In
+					.page__drawer-form-line-alt
+						.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.mdl-textfield--contrast.uk-width-1-1
+							input#mdl-input-0-input.mdl-textfield__input(type='text')
+							label.mdl-textfield__label(for='mdl-input-0-input') Email
+					.page__drawer-form-line-alt
+						.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.mdl-textfield--contrast.mdl-textfield--suffix-forgot.uk-width-1-1
+							input#mdl-input-1-input.mdl-textfield__input(type='password')
+							label.mdl-textfield__label(for='mdl-input-1-input') Password
+							.mdl-textfield__suffix
+								a(href='') Forgot?
+					.page__drawer-form-line-alt
+						a.mdl-button.mdl-js-button.mdl-button--contrast.mdl-js-ripple-effect.uk-width-1-1(href="#")
+							| Create an account
+	button.mdl-button.mdl-js-button.mdl-button--fab.mdl-button--colored.page__floating-button.mdl-js-ripple-effect
+		i.mdi.mdi-check

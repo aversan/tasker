@@ -1,0 +1,27 @@
+form.page__drawer-form(action='')
+	.page__drawer-form-line
+		figure.uk-overlay.form-control-image-upload
+			img.form-control-image-upload__image(src="assets/images/uploads/profile-foto.jpg", alt="", width="684", height="654")
+			.uk-overlay-panel
+				div
+					i.mdi.mdi-camera
+					span Change your profile photo
+			label.form-control-image-upload__label(for="file-upload")
+				<span class="sr-only">Upload file</span>
+			input.form-control-image-upload__input#file-upload(type="file")
+	.page__drawer-form-line
+		button.mdl-button.mdl-js-button.mdl-button--raised.uk-width-1-1.mdl-js-ripple-effect.mdl-button--contrast.mdl-shadow--none
+			| Delete photo
+	.page__drawer-form-line
+		.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.mdl-textfield--contrast.uk-width-1-1
+			input#mdl-input-0-input.mdl-textfield__input(type='text', value='Trevor Reyers')
+			label.mdl-textfield__label(for='mdl-input-0-input') Name
+		.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.mdl-textfield--contrast.uk-width-1-1
+			input#mdl-input-1-input.mdl-textfield__input(type='text', value='trevorreyes@gmail.com')
+			label.mdl-textfield__label(for='mdl-input-1-input') Email
+		.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.mdl-textfield--contrast.uk-width-1-1
+			input#mdl-input-2-input.mdl-textfield__input(type='password', value='')
+			label.mdl-textfield__label(for='mdl-input-2-input') New password
+		.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.mdl-textfield--contrast.uk-width-1-1
+			input#mdl-input-3-input.mdl-textfield__input(type='password', value='')
+			label.mdl-textfield__label(for='mdl-input-3-input') Confirm password

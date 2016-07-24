@@ -1,0 +1,42 @@
+extends /blocks/layout-default/layout-default
+
+block head
+	- var pageTitle = 'Sign Up';
+	- var pageDescription = '';
+	- var pageKeywords = '';
+
+block page
+	- var pageClasses = ['page--layout-right', 'page--sign']
+
+block content
+	.mdl-layout.mdl-js-layout.mdl-layout--fixed-drawer
+		.mdl-layout__content.uk-flex.uk-flex-center.uk-flex-middle
+			.page__content-container
+				img.m-b-3.uk-responsive-width(src='assets/images/icon-white-todolist-336x336.png', alt='', width='168', height='168')
+				p.mdl-typography--display-1.m-b-0 Lorem ipsum dolor sit amet,  consectetur adipisicing elit
+		.mdl-layout__drawer.mdl-layout__drawer--right.uk-flex.uk-flex-center.uk-flex-middle
+			.page__drawer-container
+				form.page__drawer-form(action='')
+					.page__drawer-form-header
+						h2 Sign Up
+					.page__drawer-form-line-alt
+						.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.mdl-textfield--contrast.uk-width-1-1
+							input#mdl-input-0-input.mdl-textfield__input(type='text')
+							label.mdl-textfield__label(for='mdl-input-0-input') Name
+					.page__drawer-form-line-alt
+						.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.mdl-textfield--contrast.uk-width-1-1
+							input#mdl-input-1-input.mdl-textfield__input(type='text')
+							label.mdl-textfield__label(for='mdl-input-1-input') Email
+					.page__drawer-form-line-alt
+						.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.mdl-textfield--contrast.uk-width-1-1
+							input#mdl-input-2-input.mdl-textfield__input(type='password')
+							label.mdl-textfield__label(for='mdl-input-2-input') Password
+					.page__drawer-form-line-alt
+						.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.mdl-textfield--contrast.uk-width-1-1
+							input#mdl-input-3-input.mdl-textfield__input(type='password')
+							label.mdl-textfield__label(for='mdl-input-3-input') Confirm password
+					.page__drawer-form-line-alt
+						a.mdl-button.mdl-js-button.mdl-button--contrast.mdl-js-ripple-effect.uk-width-1-1(href="#")
+							| Have account?
+	button.mdl-button.mdl-js-button.mdl-button--fab.mdl-button--colored.page__floating-button.mdl-js-ripple-effect
+		i.mdi.mdi-check

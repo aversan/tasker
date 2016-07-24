@@ -1,0 +1,91 @@
+// Base class
+//
+// Requires one of the contextual, color modifier classes for `color` and
+// `background-color`.
+
+.label {
+	display: inline-block;
+	padding: .25em .75em;
+	font-size: 75%;
+	font-weight: $label-font-weight;
+	line-height: 1.1;
+	color: $label-color;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: baseline;
+	border-radius: 2px;
+
+	// Empty labels collapse automatically
+	&:empty {
+		display: none;
+	}
+}
+
+// Quick fix for labels in buttons
+.btn .label {
+	position: relative;
+	top: -1px;
+}
+
+// Add hover effects, but only for links
+a.label {
+	@include hover-focus {
+		color: $label-link-hover-color;
+		text-decoration: none;
+		cursor: pointer;
+	}
+}
+
+// Pill labels
+//
+// Make them extra rounded with a modifier to replace v3's badges.
+
+.label-pill {
+	padding-right: .6em;
+	padding-left: .6em;
+	// Use a higher than normal value to ensure completely rounded edges when
+	// customizing padding or font-size on labels.
+	border-radius: 10rem;
+}
+
+// Colors
+//
+// Contextual variations (linked labels get darker on :hover).
+
+.label-default {
+	@include label-variant($label-default-bg);
+}
+
+.label-primary {
+	@include label-variant($label-primary-bg);
+}
+
+.label-new {
+	text-transform: uppercase;
+	letter-spacing: .1ex;
+	@include label-variant($label-new-bg);
+}
+
+
+.label {
+	&__action {
+		background: transparent;
+		opacity: 0.9;
+		display: inline-block;
+		cursor: pointer;
+		text-align: center;
+		vertical-align: middle;
+		padding: 0;
+		margin: 0 0 0 0;
+		text-decoration: none;
+		border: none;
+		outline: none;
+		overflow: hidden;
+		font-size: 1.1em;
+
+		&:hover,
+		&:focus {
+			opacity: 1;
+		}
+	}
+}
