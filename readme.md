@@ -1,12 +1,6 @@
-# CSSSR Project Template
-**Шаблон проекта для быстрого старта**
-
-
-## Старт проекта
-
 ### Склонируй репозиторий и перейди в папку проекта
 ```
-git clone git@github.com:CSSSR/csssr-project-template.git new-project && cd new-project
+git clone git@github.com:aversan/tasker.git new-project && cd new-project
 ```
 
 ### Установи модули
@@ -86,7 +80,7 @@ npm run deploy
 │   │   └── block/             # Блок
 │   │       ├── block.jade     # Разметка блока
 │   │       ├── block.js       # Скрипт блока
-│   │       └── block.styl     # Стили блока
+│   │       └── block.scss     # Стили блока
 │   ├── data/                  # Данные в формате JSON
 │   ├── pages/                 # Страницы
 │   │   └── index.jade         # Разметка страницы
@@ -97,13 +91,13 @@ npm run deploy
 │   │   └── app.js             # Главный скрипт
 │   └── styles/                # Стили
 │       ├── helpers/           # Помощники
-│       │   ├── fonts.styl     # Подключение шрифтов
-│       │   ├── mixins.styl    # Примеси
-│       │   ├── optimize.styl  # Сброс стилей и фиксы
-│       │   ├── svg-size.styl  # Переменные с размерами SVG иконок (автосборка)
-│       │   └── variables.styl # Переменные
+│       │   ├── fonts.scss     # Подключение шрифтов
+│       │   ├── mixins.scss    # Примеси
+│       │   ├── optimize.scss  # Сброс стилей и фиксы
+│       │   ├── svg-size.scss  # Переменные с размерами SVG иконок (автосборка)
+│       │   └── variables.scss # Переменные
 │       ├── sprites/           # Переменные с данными PNG спрайтов (автосборка)
-│       └── app.styl           # Главный стилевой файл
+│       └── app.scss           # Главный стилевой файл
 ├── dist/                      # Сборка (автогенерация)
 │   ├── assets/                # Подключаемые ресурсы
 │   │   ├── fonts/             # Шрифты
@@ -121,7 +115,7 @@ npm run deploy
 │   ├── semver.js              # Обновление версии шаблона
 │   ├── server.js              # Запуск локального сервера
 │   ├── sprite.js              # Сборка спрайтов и CSS переменных
-│   ├── styles.js              # Сборка стилей
+│   ├── sass.js                # Сборка стилей
 │   ├── templates.js           # Сборка страниц из Jade шаблонов
 │   ├── watch.js               # Отслеживание изменений и запуск задач
 │   └── zip.js                 # Архивация папки dist
@@ -164,7 +158,7 @@ npm run deploy
 ├── app/
 │    └── styles/
 │       └── sprites/
-│           └── emoji.styl
+│           └── emoji.scss
 └── dist/
     └── assets/
         └── images/
@@ -220,5 +214,3 @@ npm run deploy
     height: 24px;
 }
 ```
-
-## [Внеси свой вклад в развитие проекта!](https://github.com/CSSSR/csssr-project-template/blob/master/contributing.md)
